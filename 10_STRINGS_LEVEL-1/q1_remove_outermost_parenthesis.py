@@ -17,5 +17,22 @@ def remove_outermost_parenthesis_brute(s):
     return ans
 s1 = "(()())(())"
 s2 = "(()())(())(()(()))"
+print(remove_outermost_parenthesis_brute(s1))
 
-print(remove_outermost_parenthesis_brute("()()"))
+
+## OPTIMAL CODE -
+def remove_outerm_par_opt(s):
+    ans = []
+    balance = 0
+    for i in s:
+        if i=="(":
+            if balance>0:
+                ans.append("(")
+            balance+=1
+        elif i==")":
+            balance-=1
+            if balance>0:
+                ans.append(")")
+    return "".join(ans)
+s2 = "(()())(())(()(()))"
+print(remove_outerm_par_opt(s2))
