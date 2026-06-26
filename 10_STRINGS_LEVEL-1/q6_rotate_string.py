@@ -12,10 +12,7 @@ print(rotate_string_brute(str,goal))
 
 # OPTIMAL APPROACH - TC - O(1),SC- o(1)
 def rotate_string_opt(str,goal):
-    if goal in str+str:
-        return True
-    else:
-        return False
+    return (goal in str+str)
 str = "abcde"
 goal = "cdeab"
 print(rotate_string_opt(str,goal))
