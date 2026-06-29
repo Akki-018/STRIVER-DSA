@@ -7,3 +7,8 @@ def palindrome(x):
         temp = temp//10
     return x == rev 
 print(palindrome(1011))
+
+## CHECK IF A string IS PALINDROME OR NOT 
+def palindrome_str(x):
+    return x == x[::-1]
+print(palindrome_str("ab"))
