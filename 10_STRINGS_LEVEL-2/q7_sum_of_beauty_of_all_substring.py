@@ -12,3 +12,15 @@ def sum_beauty_substr_brute(s):
     return summ 
 s = "aabcbaa"
 print(sum_beauty_substr_brute(s))
+
+# OPTIMAL SOLUTION 
+def sum_beauty_substr_opt(s):
+    summ = 0 
+    for i in range(len(s)):
+        freq = {}
+        for j in range(i,len(s)):
+            freq[s[j]] = freq.get(s[j],0)+1
+            summ+=max(freq.values())-min(freq.values())
+    return summ
+s = "aabcbaa"
+print(sum_beauty_substr_opt(s))
