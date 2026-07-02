@@ -43,6 +43,21 @@ def count_num_homo_substr_opt(s):
 s = "abbcccaaa"
 print(count_num_homo_substr_opt(s))
 
+## PROBLEM - 3 ==> Count the number of substrings with only 1s 
+def count_subst_1s(s):
+    cnt = 0 
+    leng = 0 
+    for i in range(len(s)):
+        if s[i]=='1':
+            leng += 1
+        else:
+            cnt+=leng*(leng+1)//2
+            leng = 0
+    cnt = (cnt+leng*(leng+1)//2)%(10**9+7)
+    return cnt 
+s = "0110111"
+print(count_subst_1s(s))
+
 
 
 
