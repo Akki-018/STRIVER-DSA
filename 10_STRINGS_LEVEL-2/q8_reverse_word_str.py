@@ -16,3 +16,8 @@ def reverse_word_str_brute(s):
     return " ".join(words[::-1])
 s = "the sky is blue"
 print(reverse_word_str_brute(s))
+
+## OPTIMAL CODE 
+def rev_word_str_opt(s):
+    return " ".join(s.split()[::-1])
+print(rev_word_str_opt(s))
