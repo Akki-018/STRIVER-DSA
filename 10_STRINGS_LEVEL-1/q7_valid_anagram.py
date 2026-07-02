@@ -10,7 +10,7 @@ def valid_anagram_brute(s,t):
         freq2[t[i]] = freq2.get(t[i],0)+1
     return freq1==freq2
 s = "anagram"
-t = "ganarm"
+t = "ganarma"
 print(valid_anagram_brute(s,t))
 
 # BETTER APPROACH -
@@ -29,10 +29,11 @@ def valid_anagram_bett(s,t):
             return False
     return True
 s = "akshat"
-t = "kshati"
+t = "kshata"
 print(valid_anagram_bett(s,t))
 
 ## ONE LINER APPROACH 
 def valid_anagram(s,t):
     return sorted(s.lower())==sorted(t.lower())
 print(valid_anagram(s,t))
+
