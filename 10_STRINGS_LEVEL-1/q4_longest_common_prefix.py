@@ -1,5 +1,5 @@
-## RETURN THE LONGEST COMMON PREFIX
-# BRUTE FORCE 
+## RETURN THE LONGEST COMMON PREFIX -- VERTICAL SCANNING
+# BRUTE FORCE -- We compare column wise
 def longest_comm_prefix(strs):
     a = ""
     min_len = len(strs[0])
@@ -12,3 +12,5 @@ def longest_comm_prefix(strs):
         a += strs[0][i]
     return a
 print(longest_comm_prefix(["flower","fl","flag"]))
+
+## 

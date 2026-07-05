@@ -34,6 +34,7 @@ def find_peak_ele(matrix):
             high = mid-1
 mat = [[10,11,15],[21,9,14],[7,16,32]]
 print(find_peak_ele(mat))
+
         
 
         

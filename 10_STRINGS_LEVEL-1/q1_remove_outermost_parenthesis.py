@@ -16,16 +16,16 @@ def remove_outermost_parenthesis_brute(s):
             start = i+1
     return ans
 s1 = "(()())(())"
-s2 = "(()())(())(()(()))"
+
 print(remove_outermost_parenthesis_brute(s1))
 
 
-## OPTIMAL CODE -
+## OPTIMAL CODE- we check then add and +=1 for "(" and subtract -=1 and check and then add ")" in the ans with one varibale balance
 def remove_outerm_par_opt(s):
     ans = []
     balance = 0
     for i in s:
-        if i=="(":
+        if i=="(": 
             if balance>0:
                 ans.append("(")
             balance+=1

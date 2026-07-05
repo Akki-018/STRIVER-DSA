@@ -8,8 +8,7 @@ def largest_odd_str_brute(num):
         for j in range(i,len(num)):
             a = int(num[i:j+1])
             if a%2==1:
-                if a>maxi:
-                    maxi = a
+                maxi = max(maxi,a)
     if maxi == float('-inf'):
         return ""
     else:

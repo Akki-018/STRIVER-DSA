@@ -1,4 +1,5 @@
 ## Linked list stores element in nodes - every node has data and next - where next stores the address of the next element 
+# SINGLY LINKED LIST 
 class Node:                   # Creating own datatype -  Node 
     def __init__(self,data):    # self - refers to the particular object 
         self.data = data
@@ -13,6 +14,12 @@ n2.next = n3
 n3.next = n4 
 n2.data = 50 
 print(head.next.data)
+
+n5 = Node(40)
+n4.next = n5
+
+
+
 
 
 
