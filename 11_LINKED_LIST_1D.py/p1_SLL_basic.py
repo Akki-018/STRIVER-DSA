@@ -88,3 +88,31 @@ def deletion_end_sll(head):
     return head
 head = deletion_end_sll(head)
 traversal_sll(head)
+
+# DELETION OF THE KTH NODE IN A SLL 
+def deletion_kth_sll(head,k):
+    if head is None:
+        return None
+    if k==1:
+        return head.next
+    curr = head 
+    cnt= 1 
+    while curr is not None and cnt<k-1:
+        curr = curr.next 
+        cnt+=1
+    if curr is None or curr.next is None:
+        return head 
+    curr.next = curr.next.next 
+    return head 
+head = deletion_kth_sll(head,2)
+traversal_sll(head)
+
+# DELETE GIVEN NODE (Without head) - LEETCODE 237 
+def delete_node(node):
+    node.data = node.next.data
+    node.next = node.next.next 
+    
+delete_node(15)
+traversal_sll(head)
+
+
