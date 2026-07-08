@@ -73,4 +73,20 @@ def insert_head_dll(head,val):
 head = insert_head_dll(head,0)
 forward_traversal(head)
 
+# INSERT AT THE END OF A DLL 
+def insert_end_dll(head,val):
+    new_node = Node(val)
+    if head is None:
+        return new_node
+    curr = head 
+    while curr.next:
+        curr = curr.next
+    curr.next = new_node
+    new_node.prev = curr 
+    return head
+head = insert_end_dll(head,60)
+forward_traversal(head)
+
+
+
 
