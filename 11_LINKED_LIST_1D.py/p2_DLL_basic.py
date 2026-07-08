@@ -87,6 +87,30 @@ def insert_end_dll(head,val):
 head = insert_end_dll(head,60)
 forward_traversal(head)
 
+# DELETE THE HEAD OF A DLL 
+def delete_head_dll(head):
+    if not head:
+        return None
+    if not head.next:
+        return head 
+    head = head.next
+    head.prev = None
+    return head 
+head = delete_head_dll(head)
+forward_traversal(head)
 
+# DELETE THE END OF A DLL 
+def delete_end_dll(head):
+    if not head:
+        return None
+    if not head.next:
+        return None 
+    curr = head 
+    while curr.next.next:
+        curr = curr.next
+    curr.next = None
+    return head
+head = delete_end_dll(head)
+forward_traversal(head)
 
 
