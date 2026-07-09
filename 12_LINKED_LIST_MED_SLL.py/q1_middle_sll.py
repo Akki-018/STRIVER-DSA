@@ -40,5 +40,15 @@ def middle_sll_brute(head):
 curr = middle_sll_brute(head)
 traversal_sll(curr)
 
+def middle_sll_opt(head):
+    slow = head
+    fast = head 
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next 
+    return slow 
+cur = middle_sll_opt(head)
+traversal_sll(cur)
+
 
  
