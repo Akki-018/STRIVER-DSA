@@ -35,3 +35,16 @@ def reverse_ll(head):
     return prev 
 a = reverse_ll(head)
 traversal_sll(a)
+
+# RECURSIVE APPROACH 
+def reverse_lll(head):
+    def reverse(head):
+        if (head==None or head.next==None):
+            return head 
+    new_head = reverse(head.next)
+    front = head.next
+    front.next = head
+    head.next = None
+    return new_head
+a = reverse_lll(head)
+traversal_sll(head)
