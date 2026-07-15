@@ -38,3 +38,16 @@ def linked_list_cycle(head):
         curr = curr.next
     return False
 print(linked_list_cycle(head))
+
+## OPTIMAL APPROACH - Two pointer approach 
+def linked_list_cycle_opt(head):
+    slow = head 
+    fast = head 
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+        if slow == fast:
+            return True
+    return False
+print(linked_list_cycle_opt(head))
+
