@@ -36,3 +36,21 @@ def linked_list_brute(head):
         curr = curr.next 
     return None 
 print(linked_list_brute(head))
+
+## OPTIMAL APPROACH - TC -o(n),Sc-o(1)
+def linked_list_opt(head):
+    slow = head 
+    fast = head 
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next 
+        if slow==fast:
+            break
+    if not fast.next or not fast:
+        return None
+    slow = head 
+    while slow!=fast:
+        slow = slow.next
+        fast = fast.next 
+    return slow
+print(linked_list_opt(head))
