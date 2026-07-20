@@ -48,3 +48,19 @@ def delete_nth(head,n):
     return head 
 head = delete_nth(head,2)
 traversal_sll(head)
+
+## IMPROVED CODE 
+def delete_nth_imp(head,n):
+    dummy = Node(0)
+    dummy.next = head 
+    slow = dummy 
+    fast = dummy
+    for _ in range(n+1):
+        fast = fast.next 
+    while fast:
+        slow = slow.next
+        fast = fast.next 
+    slow.next = slow.next.next 
+    return dummy.next 
+head = delete_nth_imp(head,2)
+traversal_sll(head)
