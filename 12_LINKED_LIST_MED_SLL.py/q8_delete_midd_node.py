@@ -1,0 +1,66 @@
+## TO DELETE THE MIDDLE NODE of THE LINKED LIST 
+# SINGLY LINKED LIST 
+# CREATING A SINGLY LINKED LIST 
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+n1 = Node(5)
+n2 = Node(10)
+n3 = Node(15)
+n4 = Node(20)
+n5 = Node(25)
+n6 = Node(30)
+head = n1
+n1.next = n2
+n2.next = n3 
+n3.next = n4
+n4.next = n5
+n5.next = n6
+
+# TRAVERSAL IN A SLL 
+def traversal_sll(head):
+    curr = head 
+    while curr:
+        print(curr.data , end = " <-> ")
+        curr = curr.next
+    print(None)
+traversal_sll(head)
+
+## BRUTE FORCE - TC - o(n), SC -o(1)
+def delete_midd_ll(head):
+    if not head or not head.next:
+        return None 
+    cnt = 0 
+    curr = head 
+    while curr:
+        cnt+=1
+        curr = curr.next 
+    mid = cnt//2
+    a = 0 
+    curr = head 
+    while curr:
+        if a == mid-1:
+            curr.next = curr.next.next
+            break
+        curr = curr.next 
+        a+=1
+    return head 
+head = delete_midd_ll(head)
+traversal_sll(head)
+
+## IMPROVED CODE 
+def delete_mid_imp(head):
+    if not head or not head.next:
+        return None 
+    prev = None 
+    slow = head 
+    fast = head 
+    while fast and fast.next:
+        prev = slow
+        slow = slow.next 
+        fast = fast.next.next
+    prev.next = slow.next 
+    return head 
+head = delete_mid_imp(head)
+traversal_sll(head)
