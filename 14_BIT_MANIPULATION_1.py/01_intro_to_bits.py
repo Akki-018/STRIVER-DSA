@@ -4,11 +4,10 @@
 # BINARY NUMBER SYSTEM - Base 2 - 0 1 
 # BINARY TO DECIMAL 
 def binary2decimal(s):
-    s = s[::-1]
-    n = len(s)
+    
     ans = 0
-    for i in range(n):
-        ans += int(s[i])*(2**(i))
+    for i in s:
+        ans = ans*2 + int(i)
     return ans
 print(binary2decimal("1101"))
 
