@@ -16,3 +16,4 @@ def count_number_set_bit_opt(n):
         n=n&(n-1)
     return cnt 
 print(count_number_set_bit_opt(40))
+
