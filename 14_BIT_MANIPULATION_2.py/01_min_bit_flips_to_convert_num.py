@@ -14,3 +14,13 @@ def min_bits_flip_brut(start,goal):
             cnt+=1
     return cnt 
 print(min_bits_flip_brut(10,7))
+
+## OPTIMAL SOLUTION
+def min_bits_flip_opt(start,goal):
+    xor = start^goal
+    cnt = 0 
+    while xor>0:
+        cnt+=(xor&1)
+        xor = xor>>1
+    return cnt 
+print(min_bits_flip_opt(10,7))
