@@ -107,12 +107,8 @@ def deletion_kth_sll(head,k):
 head = deletion_kth_sll(head,2)
 traversal_sll(head)
 
-# DELETE GIVEN NODE (Without head) - LEETCODE 237 
-def delete_node(node):
-    node.data = node.next.data
-    node.next = node.next.next 
-    
-delete_node(15)
-traversal_sll(head)
+# DELETE GIVEN NODE (Without head) - LEETCODE 237 - done 
+
+
 
 

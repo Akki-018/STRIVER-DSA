@@ -64,3 +64,4 @@ def delete_mid_imp(head):
     return head 
 head = delete_mid_imp(head)
 traversal_sll(head)
+

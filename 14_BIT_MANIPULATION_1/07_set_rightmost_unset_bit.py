@@ -12,4 +12,4 @@ print(set_unset_rightmost_bit_bru(13))
 # OPTIMAL SOLUTION 
 def set_unset_rightmost_bit_opt(n):
     return n|(n+1)
-print(set_unset_rightmost_bit_opt(13))
+print(set_unset_rightmost_bit_opt(13)) 

@@ -103,6 +103,7 @@ imp point - Every shift doubles the number
 
 '''
 '''
+1<<i
 creates a binary number where only the ith - bit is set to 1
 '''
 
@@ -119,3 +120,12 @@ ex - 20>>2 - 11100 shifts to right 2 times give - 111 i.e 7
 print(5>>1)
 print(20>>2)    
 print(15>>3)
+
+''' 
+Right shift divides the number by 2 
+
+for non -negative numbers - formula => n>>i = floor(n/2*i)
+
+'''
+
+

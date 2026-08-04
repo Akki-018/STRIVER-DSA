@@ -25,7 +25,7 @@ def traversal_sll(head):
     print(None)
 traversal_sll(head)
 
-## Optimal solution - TC-o(n),Sc-o(1)
+## Optimal solution - TC-o(n),Sc-o(1)   
 def odd_even_ll(head):
     if not head :
         return None 
@@ -41,3 +41,4 @@ def odd_even_ll(head):
     return head
 head = odd_even_ll(head)
 traversal_sll(head)
+

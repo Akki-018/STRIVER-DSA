@@ -4,7 +4,6 @@
 # BINARY NUMBER SYSTEM - Base 2 - 0 1 
 # BINARY TO DECIMAL 
 def binary2decimal(s):
-    
     ans = 0
     for i in s:
         ans = ans*2 + int(i)
@@ -13,6 +12,8 @@ print(binary2decimal("1101"))
 
 # DECIMAL TO BINARY 
 def decimal2binary(n):
+    if n==0:
+        return "0"
     ans = ""
     while n!=0 :
         ans+=str(n%2)

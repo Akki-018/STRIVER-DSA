@@ -39,7 +39,7 @@ def linked_list_cycle(head):
     return False
 print(linked_list_cycle(head))
 
-## OPTIMAL APPROACH - Two pointer approach 
+## OPTIMAL APPROACH - Two pointer approach  - Tortoise hair method , floyd cycle detection method 
 def linked_list_cycle_opt(head):
     slow = head 
     fast = head 

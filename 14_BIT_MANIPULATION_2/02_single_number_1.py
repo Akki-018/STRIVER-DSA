@@ -6,3 +6,4 @@ def single_num_1(num):
     return xor 
 num = [2,2,1]
 print(single_num_1(num))
+

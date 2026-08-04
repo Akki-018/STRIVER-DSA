@@ -36,9 +36,10 @@ def length_ll(head):
             break 
     if not fast.next or not fast:
         return 0 
-    temp = slow.next 
+    temp = head 
     while temp!=slow:
         cnt+=1
         temp = temp.next 
     return cnt
 print(length_ll(head))
+

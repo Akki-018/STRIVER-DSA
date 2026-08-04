@@ -29,5 +29,7 @@ def count_prime_opt(n):
             for j in range(i*i,n,i):
                 isprime[j] = False
     return sum(isprime)
-print(count_prime_opt(50))
+print(count_prime_opt(10))
+
+
             

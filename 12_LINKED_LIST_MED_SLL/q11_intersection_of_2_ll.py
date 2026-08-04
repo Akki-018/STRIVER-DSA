@@ -59,3 +59,4 @@ def intersection_bett(head1,head2):
         curr2 = curr2.next 
     return None 
 print(intersection_bett(head1,head2))
+

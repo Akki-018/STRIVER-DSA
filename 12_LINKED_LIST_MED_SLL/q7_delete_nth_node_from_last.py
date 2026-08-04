@@ -64,3 +64,4 @@ def delete_nth_imp(head,n):
     return dummy.next 
 head = delete_nth_imp(head,2)
 traversal_sll(head)
+
