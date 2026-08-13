@@ -12,3 +12,4 @@ def gener_paren(n):
     recursion(0,0,"")
     return ans 
 print(gener_paren(3))
+
