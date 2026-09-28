@@ -6,7 +6,5 @@ def palindrome_str(s,left,right):
     if s[left] != s[right]:
         return False
     return palindrome_str(s,left+1,right-1)
-s = "madams"
-print(palindrome_str(s,0,5))
-
-#
+s = "madam"
+print(palindrome_str(s,0,4))

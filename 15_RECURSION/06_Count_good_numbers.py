@@ -16,3 +16,4 @@ def cnt_good_num(n):
     return ans%mod
 print(cnt_good_num(50))
 
+

@@ -1,6 +1,7 @@
 ## ATOI - ASCII to INTEGER 
 # ex: -> "1234" to 1234 , "7" -> 7 , "0009" -> 9 
 ## atoi("1234") = atoi("123")*10+4
+# for non - negative 
 def rec_imp_atoi(s):
     if len(s)==0:
         return 0 
@@ -9,3 +10,6 @@ def rec_imp_atoi(s):
     return small*10+last
 s = "-234"
 print(rec_imp_atoi(s))
+
+
+    

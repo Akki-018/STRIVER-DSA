@@ -13,3 +13,4 @@ def subsets(nums):
     return ans 
 nums = [1,2,3]
 print(subsets(nums))
+
