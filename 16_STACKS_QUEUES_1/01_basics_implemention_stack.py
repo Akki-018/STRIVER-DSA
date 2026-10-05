@@ -1,30 +1,41 @@
 ## STACK IS A DATA STRUCTURE TO STORE CERTAIN TYPE OF DATA , and performs push,pop,top,size operations on it - Follows the LIFO principle
 ## IMPLEMENTION OF STACK USING ARRAYS
 class Stack:
-    def __init__(self):
-        self.stack = []
+    def __init__(self,size):
+        self.size = size
+        self.stack = [None]*size
+        self.top = -1
 
-    def push(self,x):
-        self.stack.append(x)
+    def push(self,val):
+        if self.top == self.size -1 :
+            print("Stack OVerflow")
+            return 
+        self.top = self.top+1
+        self.stack[self.top] = val
+
     def pop(self):
-        return self.stack.pop()
-    def top(self):
-        return self.stack[-1]
-    def size(self):
-        return len(self.stack)
+        if self.top == -1 :
+            print("Stack Underflow")
+            return 
+        value = self.stack[self.top]
+        self.top-=1
+        return value
+    def peek(self):
+        if self.top == -1:
+            print("Stack is Empty")
+            return 
+        return self.stack[self.top]
     def isEmpty(self):
-        return len(self.stack)==0
-    def display(self):
-        return self.stack
+        return self.top==-1 
+    def isFull(self):
+        return self.top == self.size -1 
 
-s = Stack()
-s.push(2)
-s.push(3)
-s.push(4)
-print(s.top())
-print(s.pop())
-print(s.top())
-print(s.display())
+s = Stack(5)
+s.push(5)
+s.push(10)
+s.push(15)
+print(s.peek())
+s.pop()
+print(s.peek())
 
-
-
+    
