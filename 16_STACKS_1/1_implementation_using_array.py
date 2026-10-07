@@ -38,4 +38,3 @@ print(s.peek())
 s.pop()
 print(s.peek())
 
-    
